@@ -1,6 +1,7 @@
 const queryString = require("query-string");
 const axios = require("axios");
 const jwt = require("jsonwebtoken");
+
 const {
     GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET,
@@ -45,13 +46,6 @@ const googleRedirect = async (req, res) => {
         },
     });
 
-    // const validateUserData = userData.data.email;
-    // if (!validateUserData) {
-    //   throw RequestError(
-    //     403,
-    //     "You should register from front-end first (not postman)"
-    //   );
-    // }
     const { email, name } = userData.data;
     const user = await User.findOne({ email });
     if (!user) {
@@ -67,7 +61,6 @@ const googleRedirect = async (req, res) => {
     const newSession = await Session.create({
         uid: userNew._id,
     });
-    // const { access_token } = tokenData.data;
 
     const payload = {
         uid: userNew._id,

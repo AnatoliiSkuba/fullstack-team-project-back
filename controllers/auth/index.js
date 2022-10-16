@@ -4,18 +4,16 @@ const logout = require("./logout");
 const googleAuth = require("./googleAuth");
 const googleRedirect = require("./googleRedirect");
 const restorePassword = require("./restorePassword");
-// const managePages = require("./managePages/");
 const refreshTokens = require("./refresh");
 const getUserInfo = require("./getUserInfo");
 
 module.exports = {
-  register,
-  login,
-  logout,
-  googleAuth,
-  googleRedirect,
-  restorePassword,
-  // managePages,
-  getUserInfo,
-  refreshTokens,
+    register,
+    login,
+    logout,
+    googleAuth,
+    googleRedirect,
+    restorePassword,
+    getUserInfo,
+    refreshTokens,
 };
