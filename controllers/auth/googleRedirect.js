@@ -74,7 +74,7 @@ const googleRedirect = async (req, res) => {
     });
 
     return res.redirect(
-        `${FRONTEND_URL}/fullstack-team-project/login?accessToken=${token}&name=${name}&email=${email}&refreshToken=${refreshToken}&sid=${newSession._id}`
+        `${FRONTEND_URL}/login?accessToken=${token}&name=${name}&email=${email}&refreshToken=${refreshToken}&sid=${newSession._id}`
     );
 };
 module.exports = googleRedirect;
